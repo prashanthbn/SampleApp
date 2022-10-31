@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace Sample.UnitTests;
 
-public class Tests
+public class WeatherTests
 {
     [SetUp]
     public void Setup()
@@ -10,8 +10,10 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void Controller_Given_Content_Should_Return_Ok()
     {
+        //Arrange
         Assert.Pass();
     }
+
 }
