@@ -1,0 +1,39 @@
+resources:
+- name: master
+  type: git
+  icon: git
+  source:
+    uri: https://github.com/prashanthbn/SampleApp.git
+    branch: master
+    ignore_paths:
+      - .git/**
+      - .git/*
+      - .git/
+      - .git
+      - .gitignore
+jobs:
+
+  - name: CI
+    serial: true
+
+    plan:
+
+      - get: master
+        trigger: true
+
+      #
+      # TREE SOURCE CODE - MASTER
+      #
+
+      - task: tree-source
+        file: master/Pipelines/Tasks/tree.yaml
+        input_mapping: { folder: master }
+
+      #
+      #  BUILD THE SOURCE CODE
+      #
+
+      - task: build
+        file: master/Pipelines/Tasks/build.yaml
+        input_mapping: { code: master }
+        output_mapping: { code: master }
