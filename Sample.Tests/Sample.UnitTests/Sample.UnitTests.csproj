@@ -16,8 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sample.Models\Sample.Models.csproj" />
-    <ProjectReference Include="..\Sample.Services\Sample.Services.csproj" />
-    <ProjectReference Include="..\Sample.Services\Sample.API.csproj" />
+    <ProjectReference Include="..\..\Sample.Services\Sample.Services.csproj" />
+    <ProjectReference Include="..\..\Sample.Models\Sample.Models.csproj" />
+    <ProjectReference Include="..\..\Sample.API\Sample.API.csproj" />
   </ItemGroup>
+  
 </Project>
