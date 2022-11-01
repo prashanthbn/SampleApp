@@ -25,9 +25,9 @@ jobs:
       # TREE SOURCE CODE - MASTER
       #
 
-      #- task: tree-source
-      # file: master/Pipeline/Tasks/tree.yml
-      #  input_mapping: { folder: master }
+      - task: tree-source
+        file: master/Pipeline/Tasks/tree.yml
+        input_mapping: { folder: master }
 
       #
       #  BUILD THE SOURCE CODE
