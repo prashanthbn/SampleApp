@@ -20,5 +20,5 @@ run:
   - |
     pwd
     ls
-    chmod u+x code/Pipelines/Scripts/build.sh
-    bash code/Pipelines/Scripts/build.sh
+   # chmod u+x code/Pipelines/Scripts/build.sh
+    #bash code/Pipelines/Scripts/build.sh

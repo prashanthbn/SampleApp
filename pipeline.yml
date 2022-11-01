@@ -33,6 +33,6 @@ jobs:
             args:
                 - -exc
                 - |
-                    cd ./seroter-source
+                    cd ./master
                     dotnet restore
                     dotnet test
