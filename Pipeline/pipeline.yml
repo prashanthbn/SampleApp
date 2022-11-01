@@ -13,7 +13,7 @@ resources:
       - .gitignore
 jobs:
 
-  - name: CI
+  - name: ci
     serial: true
 
     plan:
@@ -26,7 +26,7 @@ jobs:
       #
 
       - task: tree-source
-        file: master/Pipelines/Tasks/tree.yaml
+        file: master/Pipeline/Tasks/tree.yml
         input_mapping: { folder: master }
 
       #
@@ -34,6 +34,6 @@ jobs:
       #
 
       - task: build
-        file: master/Pipelines/Tasks/build.yaml
+        file: master/Pipeline/Tasks/build.yml
         input_mapping: { code: master }
         output_mapping: { code: master }
