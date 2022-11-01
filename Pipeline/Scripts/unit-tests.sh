@@ -19,12 +19,12 @@ header 'UNIT TESTS COMPLETED'
 
 ###############################################################################
 
-header 'DELETING UNIT TESTS'
+#header 'DELETING UNIT TESTS'
 
 #cd ..
 
 #rm --recursive --force Unit
  
-header 'UNIT TESTS DELETED'
+#header 'UNIT TESTS DELETED'
 
 ###############################################################################
