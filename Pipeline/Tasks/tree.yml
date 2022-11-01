@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: prashanthbn/alpine-tree
-    tag: latest
+    repository: mcr.microsoft.com/dotnet/sdk
+    tag: 6.0-jammy
 inputs:
 - name: folder
 
@@ -14,4 +14,4 @@ run:
   args:
   - -exec
   - |
-    tree
+    ls
