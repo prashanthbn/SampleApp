@@ -14,9 +14,5 @@ outputs:
 - name: code
 
 run:
-  path: sh
-  args:
-  - -exec
-  - |
-    chmod u+x code/Pipelines/Scripts/build.sh
-    bash code/Pipelines/Scripts/build.sh
+  path: dotnet
+  args: ["build"]
