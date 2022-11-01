@@ -37,3 +37,11 @@ jobs:
         file: master/Pipeline/Tasks/build.yml
         input_mapping: { code: master }
         output_mapping: { code: master }
+
+      #
+      # TREE BUILT
+      #
+
+      - task: tree-built
+        file: master/Pipelines/Tasks/tree.yaml
+        input_mapping: { folder: master }
