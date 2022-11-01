@@ -4,7 +4,7 @@ resources:
   icon: git
   source:
     uri: https://github.com/prashanthbn/SampleApp.git
-    branch: master
+    branch: develop
     ignore_paths:
       - .git/**
       - .git/*
