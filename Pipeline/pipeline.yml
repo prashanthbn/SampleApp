@@ -43,5 +43,14 @@ jobs:
       #
 
       - task: tree-built
-        file: master/Pipelines/Tasks/tree.yaml
+        file: master/Pipeline/Tasks/tree.yml
         input_mapping: { folder: master }
+      
+      #
+      # RUN UNIT TESTS
+      #
+
+      - task: unit-tests
+        file: master/Pipeline/Tasks/unit-tests.yml
+        input_mapping: { built: master }
+        output_mapping: { built: master }
