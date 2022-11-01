@@ -71,5 +71,5 @@ jobs:
 
       - put: sample-api-img
         params:
-          build: .
-          dockerfile: master/Pipelines/Dockerfile
+          build: .f
+          dockerfile: master/Pipeline/Dockerfile
