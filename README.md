@@ -1,5 +1,15 @@
 # SampleApp - Concourse CI
 
+###
+    Continuous integration (CI) is practice that involves developers making small changes and checks to their code. Due to the scale of requirements and the number of steps involved, this process is automated to ensure that teams can build, test, and package their applications in a reliable and repeatable way.
+###
+    Smaller Code Changes
+    Fault Isolations
+    Faster Mean Time To Resolution
+    More Test Reliability
+    Faster Release Rate
+    Easy Maintenance and Updates
+    Higher-Quality Code
 ### Pipeline
     A pipeline is the result of configuring Jobs and Resources together. When you configure a pipeline, it takes on a life of its own, to continuously detect resource versions and automatically queue new builds for jobs as they have new available inputs.
 
