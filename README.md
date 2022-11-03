@@ -22,7 +22,7 @@ A pipeline is the result of configuring Jobs and Resources together. When you co
 Resources like the git resource and s3 resource are used to express source code, dependencies, deployments, and any other external state. This interface is also used to model more abstract things like scheduled or interval triggers, via the time resource.
 
 ### Jobs
-    Jobs are sequences of get, put, and task steps to execute. These steps determine the job's inputs and outputs. Jobs are designed to be idempotent and loosely coupled, allowing the pipeline to grow with the project's needs without requiring engineers to keep too much in their head at a time.
+jobs are sequences of get, put, and task steps to execute. These steps determine the job's inputs and outputs. Jobs are designed to be idempotent and loosely coupled, allowing the pipeline to grow with the project's needs without requiring engineers to keep too much in their head at a time.
 
 ### Steps
 
