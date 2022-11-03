@@ -5,6 +5,7 @@
 `docker-compose up -d`
 
 `cd ..`
+
 `fly -t tutorial set-pipeline -p hello-world -c hello-world.yml`
 
 `fly -t tutorial unpause-pipeline -p hello-world`
