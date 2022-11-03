@@ -1,5 +1,7 @@
 using NUnit.Framework;
 
+using Sample.Services;
+
 namespace Sample.UnitTests;
 
 public class WeatherTests
@@ -10,10 +12,11 @@ public class WeatherTests
     }
 
     [Test]
-    public void Controller_Given_Content_Should_Return_Ok()
+    public void GetWeather_Should_Return_Weather()
     {
-        //Arrange
-        Assert.Pass();
+        IWeatherService sut = new WeatherService();
+        var result = sut.GetWeather(5);
+        Assert.IsNotNull(result);
     }
 
 }

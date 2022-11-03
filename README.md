@@ -1,15 +1,17 @@
 # SampleApp - Concourse CI
 
-###
-    Continuous integration (CI) is practice that involves developers making small changes and checks to their code. Due to the scale of requirements and the number of steps involved, this process is automated to ensure that teams can build, test, and package their applications in a reliable and repeatable way.
-###
-    Smaller Code Changes
-    Fault Isolations
-    Faster Mean Time To Resolution
-    More Test Reliability
-    Faster Release Rate
-    Easy Maintenance and Updates
-    Higher-Quality Code
+### What is CI?
+    Continuous integration (CI) is practice to automate code integration.
+    were developers work on their code in a local environment and commit their changes to a shared repository on a regular basis. This code can then be integrated, with code existing code. The new code is tested along with existing code and checked for any errors, standards and vulnarabilities.
+    and then it can be packaged to make an artifact.
+### Why CI?
+   - Smaller Code Changes
+   - Fault Isolations
+   - Faster Mean Time To Resolution
+   - More Test Reliability
+   - Faster Release Rate
+   - Easy Maintenance and Updates
+   - Higher-Quality Code
 ### Pipeline
     A pipeline is the result of configuring Jobs and Resources together. When you configure a pipeline, it takes on a life of its own, to continuously detect resource versions and automatically queue new builds for jobs as they have new available inputs.
 
@@ -23,4 +25,22 @@
     A step is a single container running on a Concourse worker. Each step in a job plan runs in its own container. You can run anything you want inside the container (i.e. run my tests, run this bash script, build this image, etc.).
     
     Each job has a single build plan configured as job.plan. A build plan is a recipe for what to run when a build of the job is created.
+
+
+
+`docker-compose up -d`
+
+`fly -t tutorial set-pipeline -p hello-world -c hello-world.yml`
+
+`fly -t tutorial unpause-pipeline -p hello-world`
+
+`fly -t tutorial trigger-job --job hello-world/hello-world-job --watch`
+
+`fly -t tutorial set-pipeline -p simple-build -c pipeline.yml`
+ 
+`fly -t tutorial unpause-pipeline -p simple-build`
+
+`fly -t tutorial set-pipeline -p simple-app --var docker-hub-username=prashanthbn --var docker-hub-password=rPJaas8xZBEaVNE`
+
+`docker run -d -p 8090:80 --name myapp prashanthbn/sample-api`
 
