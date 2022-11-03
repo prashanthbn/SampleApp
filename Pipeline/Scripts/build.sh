@@ -7,7 +7,7 @@ source "${PARENT_PATH}/header.sh"
 WD=$(pwd)
 echo "WD:" ${WD}
 
-cd ../../
+cd code
 
 ###############################################################################
 
@@ -50,17 +50,17 @@ dotnet publish --configuration Release \
                --nologo \
                --no-build \
                --no-restore \
-               --output Published \
+               --output ${WD}/code/Published \
                --verbosity normal
 
 header 'PUBLISH COMPLETED'
 
 ###############################################################################
 
-header 'DELETING SOURCE'
+#header 'DELETING SOURCE'
 
 #rm --recursive --force ${WD}/code/Source
 
-header 'SOURCE DELETED'
+#header 'SOURCE DELETED'
 
 ###############################################################################

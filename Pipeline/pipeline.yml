@@ -4,13 +4,22 @@ resources:
   icon: git
   source:
     uri: https://github.com/prashanthbn/SampleApp.git
-    branch: master
+    branch: develop
     ignore_paths:
       - .git/**
       - .git/*
       - .git/
       - .git
       - .gitignore
+
+- name: sample-api-img
+  type: docker-image
+  icon: docker
+  source:
+    username: ((docker-hub-username))
+    password: ((docker-hub-password))
+    repository: ((docker-hub-username))/sample-api
+
 jobs:
 
   - name: ci
@@ -37,3 +46,30 @@ jobs:
         file: master/Pipeline/Tasks/build.yml
         input_mapping: { code: master }
         output_mapping: { code: master }
+
+      #
+      # TREE BUILT
+      #
+
+      - task: tree-built
+        file: master/Pipeline/Tasks/tree.yml
+        input_mapping: { folder: master }
+      
+      #
+      # RUN UNIT TESTS
+      #
+
+      - task: unit-tests
+        file: master/Pipeline/Tasks/unit-tests.yml
+        input_mapping: { built: master }
+        output_mapping: { built: master }
+
+      
+      #
+      #  CONTAINERISE
+      #
+
+      - put: sample-api-img
+        params:
+          build: .
+          dockerfile: master/Pipeline/Dockerfile
