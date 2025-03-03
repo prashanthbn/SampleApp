@@ -7,11 +7,11 @@ image_resource:
     repository: prashanthbn/alpine-tree
     tag: latest
 inputs:
-- name: folder
+  - name: folder
 
 run:
   path: sh
   args:
-  - -exec
-  - |
-    tree
+    - -exec
+    - |
+      tree
