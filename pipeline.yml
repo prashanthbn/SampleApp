@@ -30,7 +30,7 @@ jobs:
             type: docker-image
             source:
               repository: mcr.microsoft.com/dotnet/sdk
-              tag: 9.0
+              tag: 9.0-noble
           run:
             path: sh
             args:
