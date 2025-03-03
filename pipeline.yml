@@ -30,7 +30,7 @@ jobs:
             type: docker-image
             source:
               repository: mcr.microsoft.com/dotnet/sdk
-              tag: 9.0-alpine
+              tag: 9.0
           run:
             path: sh
             args:
